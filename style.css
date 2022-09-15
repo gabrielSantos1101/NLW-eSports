@@ -1,0 +1,173 @@
+:root {
+  font-size: 63%; /*63% = 10px*/
+}
+
+* {
+  /* reset */
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* ================= Geral ================= */
+
+body {
+  background-image: url(./assets/Fundo.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #121214;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  line-height: 160%;
+}
+
+main {
+  max-width: 50.8rem;
+  width: 90%;
+  margin: 3.2rem auto;
+
+  display: grid;
+  gap: 2.4rem;
+
+  margin-top: 3.2rem;
+}
+
+section {
+  color: white;
+  padding-top: 0.4rem;
+  border-radius: 1rem;
+
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+}
+
+section div {
+  background-color: #2a2634;
+  padding: 3.2rem;
+  padding-top: 2.4rem;
+  border-radius: 0.8rem;
+}
+
+header {
+  text-align: center;
+  height: 12rem;
+}
+
+#avatar img {
+  width: 100%;
+  max-width: 12rem;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+
+  margin-top: 3.2rem;
+
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+  padding: 0.3rem;
+
+  transition: transform 0.5s;
+}
+
+#avatar img:hover {
+  transform: scale(1.1);
+}
+
+section h2 {
+  letter-spacing: -0.48px;
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 80%);
+}
+
+/* ================= Listas ================= */
+
+section ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+
+  margin-top: 2.4rem;
+}
+
+ul li {
+  transition: transform 0.3s;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+}
+
+.game-list img {
+  width: 9rem;
+  border-radius: 0.8rem;
+}
+
+.streamrs-list img {
+  width: 7rem;
+  border-radius: 50%;
+  border: 1px solid #443e54;
+}
+
+/* ================= Animations ================= */
+
+header div {
+  animation: fromTop 0.7s 0.2s backwards;
+}
+
+main section {
+  animation: toTop 0.7s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+
+main section:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+main section:nth-child(3) {
+  animation-delay: 0.6;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toTop {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
